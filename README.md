@@ -1,8 +1,6 @@
 # 🎭 Emotion Detection AI
 
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" width="120" />
-</p>
+
 
 <p align="center">
   <b>Real-Time Facial Emotion Detection using AI</b><br/>
@@ -34,14 +32,6 @@ It leverages **AI-powered face detection models** to provide instant feedback wi
 
 👉 **Try it here:**
 🔗 https://emotion-detection-five-inky.vercel.app/
-
----
-
-## 🎥 Demo Preview
-
-<p align="center">
-  <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="600" />
-</p>
 
 ---
 
