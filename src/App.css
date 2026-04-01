@@ -1,0 +1,160 @@
+/* 🌑 BACKGROUND */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a0f1c, #000);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/* 💎 CARD BASE */
+.card {
+  position: relative;
+  z-index: 2;
+  width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+}
+
+/* 🎨 EMOTION COLORS */
+.card.happy { border-color: #00f5a0; }
+.card.sad { border-color: #60a5fa; }
+.card.angry { border-color: #f87171; }
+.card.surprised { border-color: #facc15; }
+.card.fearful { border-color: #c084fc; }
+.card.disgusted { border-color: #4ade80; }
+.card.neutral { border-color: #94a3b8; }
+
+/* 💓 HAPPY */
+.card.happy { animation: happyBounce 1s ease infinite alternate; }
+@keyframes happyBounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+/* 😢 SAD */
+.card.sad { animation: sadFade 3s ease-in-out infinite; }
+@keyframes sadFade {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* 😠 ANGRY */
+.card.angry { animation: angryShake 0.4s infinite; }
+@keyframes angryShake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+/* 😲 SURPRISED */
+.card.surprised { animation: surprisedPop 0.6s ease; }
+@keyframes surprisedPop {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* 😐 NEUTRAL */
+.card.neutral { animation: neutralPulse 3s infinite; }
+@keyframes neutralPulse {
+  0% { box-shadow: 0 0 10px #94a3b8; }
+  50% { box-shadow: 0 0 25px #94a3b8; }
+  100% { box-shadow: 0 0 10px #94a3b8; }
+}
+
+/* 🤖 TITLE */
+/* 🤖 TITLE */
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* MAIN TEXT */
+.title .ai {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 3px;
+
+  background: linear-gradient(90deg, #ffffff, #aaaaaa);
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+/* SUB TEXT */
+.title .detector {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 6px;
+  color: rgba(255,255,255,0.5);
+}
+
+/* 🎥 VIDEO */
+.video-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 🎯 RESULT */
+.result {
+  margin-top: 20px;
+}
+
+.emotion-text {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.result p {
+  color: rgba(255,255,255,0.7);
+}
+
+/* ✨ PARTICLES */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #00ffff;
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
